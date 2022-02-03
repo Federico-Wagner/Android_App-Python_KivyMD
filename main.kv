@@ -1,0 +1,55 @@
+ScreenApp:
+
+<ScreenApp>:
+    Header:
+        title: "Binary to decimal"
+        pos_hint: {"top": 1}
+
+    Image:
+        id: image
+        source: "D2B.png"
+        size_hint: 0.8, 0.4
+        pos_hint: {"center_x":0.5, "y":0.65}
+
+    Button_submit:
+        text: "FLIP!"
+        pos_hint: {"center_x":0.5, "y":0.75}
+        on_press: root.flip()
+        on_release: root.default()
+
+    Input:
+        id: number
+        text:"Enter Decimal number"
+        on_focus: root.wipe()
+        size_hint: None, None
+        width: "160dp"
+        pos_hint: {"center_x":0.5, "y":0.66}
+        halign: 'center'
+
+    Button_submit:
+        text: "Convert"
+        pos_hint: {"center_x":0.5, "y":0.6}
+        on_press: root.convert()
+        on_release: root.default()
+
+    MDLabel:
+        id: output_id
+        text: root.output
+        halign: 'center'
+        bold: True
+        size_hint: 1, None
+        pos_hint: {"center_x":0.5, "y":0.48}
+
+    MDLabel:
+        id: eMesage
+        text: root.eMesage
+        halign: 'center'
+        bold: True
+        size_hint: 1, None
+        pos_hint: {"center_x":0.5, "y":0.45}
+
+    MDLabel:
+        text: "Developed by Federico Wagner"
+        halign: 'center'
+        size_hint: 1, None
+        pos_hint: {"center_x":0.5, "y":0.40}
